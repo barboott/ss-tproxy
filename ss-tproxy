@@ -391,7 +391,7 @@ update_gfwlist() {
     command_is_exists 'perl'   || log_error "command not found: perl"
     command_is_exists 'base64' || log_error "command not found: base64"
 
-    local url='https://raw.github.com/gfwlist/gfwlist/master/gfwlist.txt'
+    local url='https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt'
     local data; data=$(curl -4sSkL "$url") || log_error "download failed, exit-code: $?"
 
     local base64_decode=''
